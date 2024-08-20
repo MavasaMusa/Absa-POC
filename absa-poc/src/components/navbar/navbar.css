@@ -1,0 +1,35 @@
+.navbar {
+    
+    background-color: rgb(140, 4, 31);
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navdiv {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Space out the logo and the list */
+  }
+  
+  .logo img {
+    height: 50px; /* Adjust the height of the logo as needed */
+  }
+  
+  ul {
+    list-style-type: none;
+    display: flex; /* Display list items in a row */
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-left: 20px; /* Space between each list item */
+  }
+  
+  li a img {
+    height: 45px; /* Adjust the size of the profile and logout icons */
+    width: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
