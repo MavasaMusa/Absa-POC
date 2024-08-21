@@ -1,0 +1,152 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 3fr; /* 2:3 ratio between left and right sections */
+    align-items: center;
+    gap: 2rem; /* Add space between the two sections */
+    padding: 2rem 0;
+}
+
+.container-left {
+    padding-inline: 1rem;
+    text-align: left;
+}
+
+.container-left h1 {
+    margin-bottom: 2rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    color: rgb(21, 2, 2);
+    letter-spacing: 2px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container-left .btn {
+    padding: 1rem 2rem;
+    letter-spacing: 2px;
+    color: whitesmoke;
+    background-color: rgb(165, 6, 6);
+    border-radius: 25px;
+    width: 300px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.container-left .btn:hover {
+    color: black;
+    background: red;
+}
+
+.container-right {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 25px;
+}
+
+.container-right::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 80%;
+    border-radius: 1rem;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.05); /* A slight background to visualize the animation */
+    transform-origin: left;
+    animation: show 0.75s 1.25s ease-in-out forwards;
+}
+
+@keyframes show {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container-btn{
+    
+    background: white;
+    border-radius: 45px;
+    margin:25px;
+    padding: 25px;
+    align-items: center;
+   
+}
+
+.container-btn a{
+    text-decoration: none;
+    font-size: large;
+    font-weight: 700;
+}
+
+.container-btn img{
+    height: 120px;
+    width: 120px;
+    cursor: pointer;
+}
+.bank1, .bank2 {
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.bank1 {
+    max-width: 320px;
+    transform: translateX(1rem);
+}
+
+.bank2 {
+    max-width: 200px;
+    transform: translateX(-1rem);
+}
+
+.content {
+    padding: 5rem 2rem 0;
+    text-align: center;
+}
+
+.content h4 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.content h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgb(21, 2, 2);
+}
+
+.content h3 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(21, 2, 2);
+}
+
+.content p {
+    line-height: 1.75rem;
+}
+
+img {
+    width: 100%;
+}

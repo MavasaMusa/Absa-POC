@@ -12,7 +12,8 @@
   }
   
   .logo img {
-    height: 50px; /* Adjust the height of the logo as needed */
+    height: 65px; 
+    border-radius: 50%;/* Adjust the height of the logo as needed */
   }
   
   ul {
@@ -27,8 +28,8 @@
   }
   
   li a img {
-    height: 45px; /* Adjust the size of the profile and logout icons */
-    width: 45px;
+    height: 50px; /* Adjust the size of the profile and logout icons */
+    width: 50px;
     cursor: pointer;
     border-radius: 50%;
   }

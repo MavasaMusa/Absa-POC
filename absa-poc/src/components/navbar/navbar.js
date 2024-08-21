@@ -5,7 +5,7 @@ function Navbar() {
       <div className="navdiv">
         <div className="logo">
           <a href="#">
-            <img src="https://logos-download.com/wp-content/uploads/2018/09/ABSA_Group_Logo.png" />
+            <img src="https://www.underconsideration.com/brandnew/archives/absa_logo.png" />
           </a>
         </div>
         <ul>
