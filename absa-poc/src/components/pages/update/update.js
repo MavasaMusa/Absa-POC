@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import absa1 from './absa.png'; // Import ABSA logo
-import profileIcon from './profile-icon.jpg'; // Import profile icon
-import signOutIcon from './sign-out.jpg'; // Import sign-out icon
+import absa1 from './absa.png'; 
+import profileIcon from './profile-icon.jpg'; 
+import signOutIcon from './sign-out.jpg'; 
 
 const Update = () => {
     const [firstName, setFirstName] = useState('');
