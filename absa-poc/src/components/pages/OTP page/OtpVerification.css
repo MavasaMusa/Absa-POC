@@ -1,0 +1,71 @@
+/* src/OtpVerification.css */
+.otp-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.otp-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.otp-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.otp-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.otp-form button {
+    width: 50%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.otp-form button:disabled {
+    background-color: #6c757d;
+}
+
+.otp-form button:hover:not(:disabled) {
+    background-color: red;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+}
+
+.resend {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.resend a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.resend a:hover {
+    text-decoration: underline;
+}

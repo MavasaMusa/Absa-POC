@@ -15,7 +15,7 @@ function LandingPage() {
           <br></br>& Integrity
           </h1>
           <div className="container-btn">
-            <a href="/home"><img src={logo1}/></a>
+            <a href='/home'><img src={logo1}/></a>
             <h2>tap to proceed</h2>
           </div>
         </div>

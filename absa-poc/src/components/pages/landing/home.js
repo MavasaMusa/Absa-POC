@@ -3,6 +3,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import Webcam from 'react-webcam';
 import * as faceapi from 'face-api.js';
 import './home.css';
+import Navbar from '../../navbar/navbar';
 
 function Home() {
   const webcamRef = useRef(null);
@@ -52,10 +53,12 @@ function Home() {
   }, [isModelLoaded]);
 
   return (
+    <>
+    <Navbar />
     <div style={containerStyle}>
       {/* Left Section with Image */}
       <section style={{ ...sectionStyle, ...leftSectionStyle }}>
-        <img src={absa1} alt="Left Section" style={imageStyle} />
+        <img src='' alt="Left Section" style={imageStyle} />
       </section>
 
       {/* Right Section */}
@@ -77,6 +80,7 @@ function Home() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 
