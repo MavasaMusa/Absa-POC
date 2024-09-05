@@ -11,30 +11,7 @@ const UpdateContact = (onOptionClick) => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [balance, setBalance] = useState(0);
   
-    // AWS Configuration
-    AWS.config.update({
-      accessKeyId: 'your-access-key-id', // Replace with your AWS access key
-      secretAccessKey: 'your-secret-access-key', // Replace with your AWS secret key
-      region: 'your-region' // Replace with your AWS region
-    });
-  
-    const ses = new AWS.SES({ apiVersion: '2010-12-01' });
-    const sns = new AWS.SNS();
-  
-    // Function to send balance via email
-    const sendBalanceEmail = () => {
-      const params = {
-        Destination: {
-          ToAddresses: [email],
-        },
-        Message: {
-          Body: {
-            Text: { Data: `Your balance is $${balance}` },
-          },
-          Subject: { Data: "Your Account Balance" },
-        },
-        Source: 'your-verified-email@example.com',
-      };
+   
   
       ses.sendEmail(params, (err, data) => {
         if (err) {
@@ -55,31 +32,9 @@ const UpdateContact = (onOptionClick) => {
       });
     };
   
-    // Function to send balance via SMS
-    const sendBalanceSMS = () => {
-      const params = {
-        Message: `Your balance is $${balance}`,
-        PhoneNumber: phoneNumber,
-      };
+   
   
-      sns.publish(params, (err, data) => {
-        if (err) {
-          Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'Failed to send SMS!',
-          });
-          console.error(err, err.stack);
-        } else {
-          Swal.fire({
-            icon: 'success',
-            title: 'SMS Sent',
-            text: `Balance sent successfully to ${phoneNumber}!`,
-          });
-          console.log(data);
-        }
-      });
-    };
+     
 
     return (
         <>
@@ -124,7 +79,7 @@ const UpdateContact = (onOptionClick) => {
 
            
 
-<div style={{ marginTop: '20px' }}>
+        <div style={{ marginTop: '20px' }}>
           <button onClick={sendBalanceEmail} style={{ marginRight: '10px' }}>
             Update
           </button>
