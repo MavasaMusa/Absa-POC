@@ -4,11 +4,16 @@ import AWS from 'aws-sdk';
 import Swal from 'sweetalert2';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 function BankStatement() {
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [balance, setBalance] = useState(0);
+  const [selectedOption, setSelectedOption] = useState('1-month');
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
 
   // AWS Configuration
   AWS.config.update({
@@ -100,6 +105,35 @@ function BankStatement() {
     doc.save('3-month-statement.pdf');
   };
 
+  // Handle option change
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
+  // Handle date range change
+  const handleDateRangeChange = (dates) => {
+    const [start, end] = dates;
+    setStartDate(start);
+    setEndDate(end);
+  };
+
+  // Download statement based on selected option or date range
+  const downloadStatement = () => {
+    if (selectedOption === 'custom') {
+      Swal.fire({
+        icon: 'info',
+        title: 'Download Custom Range',
+        text: `Downloading statement from ${startDate} to ${endDate}.`,
+      });
+    } else {
+      Swal.fire({
+        icon: 'info',
+        title: 'Download Statement',
+        text: `Downloading statement for the last ${selectedOption}.`,
+      });
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -144,6 +178,76 @@ function BankStatement() {
           </table>
           <button onClick={generatePDF} style={{ marginTop: '20px' }}>
             Download PDF Statement
+          </button>
+
+          <h3>Select Statement Period</h3>
+          <div style={{ marginBottom: '20px' }}>
+            <label>
+              <input
+                type="radio"
+                value="1-month"
+                checked={selectedOption === '1-month'}
+                onChange={handleOptionChange}
+              />
+              Last 1 month
+            </label>
+            <br />
+            <label>
+              <input
+                type="radio"
+                value="3-months"
+                checked={selectedOption === '3-months'}
+                onChange={handleOptionChange}
+              />
+              Last 3 months
+            </label>
+            <br />
+            <label>
+              <input
+                type="radio"
+                value="6-months"
+                checked={selectedOption === '6-months'}
+                onChange={handleOptionChange}
+              />
+              Last 6 months
+            </label>
+            <br />
+            <label>
+              <input
+                type="radio"
+                value="12-months"
+                checked={selectedOption === '12-months'}
+                onChange={handleOptionChange}
+              />
+              Last 12 months
+            </label>
+            <br />
+            <label>
+              <input
+                type="radio"
+                value="custom"
+                checked={selectedOption === 'custom'}
+                onChange={handleOptionChange}
+              />
+              Choose Date Range
+            </label>
+          </div>
+
+          {selectedOption === 'custom' && (
+            <div style={{ marginBottom: '20px' }}>
+              <DatePicker
+                selected={startDate}
+                onChange={handleDateRangeChange}
+                startDate={startDate}
+                endDate={endDate}
+                selectsRange
+                inline
+              />
+            </div>
+          )}
+
+          <button onClick={downloadStatement} style={{ marginTop: '20px' }}>
+            Download Statement
           </button>
         </div>
       </div>

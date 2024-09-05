@@ -122,17 +122,11 @@ const UpdateContact = (onOptionClick) => {
           style={{ marginRight: '10px' }}
         /><br></br><br></br>
 
-        <input
-          type="text"
-          placeholder="Enter your residential address"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          style={{ marginRight: '10px' }}
-        /><br></br><br></br>    
+           
 
 <div style={{ marginTop: '20px' }}>
           <button onClick={sendBalanceEmail} style={{ marginRight: '10px' }}>
-            Proceed
+            Update
           </button>
           </div><br></br>
 

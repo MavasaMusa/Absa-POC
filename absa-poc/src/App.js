@@ -17,9 +17,6 @@ function App() {
       component = <LandingPage />;
       break;
 
-    case "/home":
-      component = <BankStatement />;
-      break;
 
     case "/home":
       component = <Home />;
