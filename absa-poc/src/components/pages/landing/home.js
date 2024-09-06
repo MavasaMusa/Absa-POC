@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Swal from "sweetalert";
 import './home.css';
+import Navbar from '../../navbar/navbar';
 
 function Home() {
   const videoRef = useRef(null);
@@ -111,6 +112,7 @@ function Home() {
 
   return (
     <>
+<<<<<<< HEAD
       <div className="scan-header">SCAN FACE TO LOGIN</div>
       <div className="contain">
         <video ref={videoRef} className="camera" autoPlay></video><br />
@@ -141,6 +143,34 @@ function Home() {
           </div>
         )}
       </div>
+=======
+    <Navbar />
+    <div style={containerStyle}>
+      {/* Left Section with Image */}
+      <section style={{ ...sectionStyle, ...leftSectionStyle }}>
+        <img src='' alt="Left Section" style={imageStyle} />
+      </section>
+
+      {/* Right Section */}
+      <section style={sectionStyle}>
+        <div className='scan'>
+          <h2>Scan Face To Login</h2>
+        </div>
+        <div className='face-detection'>
+          
+          <Webcam
+            ref={webcamRef}
+            style={webcamStyle}
+            screenshotFormat="image/jpeg"
+          />
+          <canvas
+            ref={canvasRef}
+            style={canvasStyle}
+          />
+        </div>
+      </section>
+    </div>
+>>>>>>> f00a11ad1a1bc45f60608fa73da661af31b7cb89
     </>
   );
 }

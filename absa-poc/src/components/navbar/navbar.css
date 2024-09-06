@@ -1,6 +1,10 @@
 .navbar {
     
+<<<<<<< HEAD
     background-color: white;
+=======
+    background-color: red;
+>>>>>>> f00a11ad1a1bc45f60608fa73da661af31b7cb89
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }

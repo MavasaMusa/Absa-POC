@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+<<<<<<< HEAD
 }
 
 .sidebar h3 {
@@ -16,11 +17,22 @@
 }
 
 .sidebar ul {
+=======
+  }
+  
+  .sidebar h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul {
+>>>>>>> f00a11ad1a1bc45f60608fa73da661af31b7cb89
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
 }
 
 .sidebar ul li {
@@ -52,6 +64,34 @@ li a {
     padding: 5px 10px; /* Add padding for better click area */
 }
 
+=======
+  }
+  
+  .sidebar ul li {
+    padding: 15px 0; /* Increase vertical padding for more space */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid red; /* Adds a divider line between items */
+  }
+  
+  .sidebar ul li:last-child {
+    border-bottom: none; /* Remove the last item's border to keep it clean */
+  }
+  
+  
+  
+  .divider {
+    height: 1px;
+    background-color: whitesmoke;
+    margin: 20px 0; /* Adds space around the divider */
+  }
+  
+
+  li a{
+    text-decoration: none;
+    color: white;
+  }
+>>>>>>> f00a11ad1a1bc45f60608fa73da661af31b7cb89
 button {
     width: 20%;
     padding: 12px;
@@ -61,6 +101,7 @@ button {
     color: #fff;
     font-size: 16px;
     cursor: pointer;
+<<<<<<< HEAD
     transition: background-color 0.3s ease;
 }
 
@@ -77,3 +118,6 @@ button:hover {
     color: yellow; /* Active link text color */
 }
 
+=======
+}
+>>>>>>> f00a11ad1a1bc45f60608fa73da661af31b7cb89
