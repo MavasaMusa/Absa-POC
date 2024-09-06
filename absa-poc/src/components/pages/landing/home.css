@@ -1,8 +1,46 @@
-.scan{
-    border: 2px solid #af1409;
-    background: #af1409;
-    border-radius: 35px;
+.contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
+  
+  .camera {
+    width: 600px;
+    height: 450px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .capture {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: red;
     color: white;
-    
-}
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .capture:hover {
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+  }
+  
+  .scan-header {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid red;
+    background: red;
+    color: white
+  }
 
+  .absa-image{
+    width: 100px;
+  }
+  

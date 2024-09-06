@@ -150,3 +150,8 @@
 img {
     width: 100%;
 }
+
+.tap{
+    display: flex;
+    margin-left: 20px;
+}

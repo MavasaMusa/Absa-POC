@@ -12,11 +12,12 @@ function LandingPage() {
       <div className="container">
         <div className="container-left">
           <h1>Empowering Your Financial <br></br>Future with Innovation 
-          <br></br>& Integrity
-          </h1>
+          <br></br>& Integrity</h1>
+          <h2 className="tap">tap to proceed</h2>
           <div className="container-btn">
-            <a href="/home"><img src={logo1}/></a>
-            <h2>tap to proceed</h2>
+          
+            <a href='/home'><img src={logo1}/></a>
+            
           </div>
         </div>
         <div className="container-right">
