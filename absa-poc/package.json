@@ -6,12 +6,9 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "absa-poc": "file:",
     "aws-sdk": "^2.1687.0",
     "axios": "^1.7.7",
-<<<<<<< HEAD
-    "date-fns": "^3.6.0",
-=======
->>>>>>> f00a11ad1a1bc45f60608fa73da661af31b7cb89
     "json2csv": "^6.0.0-alpha.2",
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.8.3",
@@ -20,12 +17,8 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.1",
     "react-scripts": "5.0.1",
-<<<<<<< HEAD
     "sweetalert": "^2.1.2",
     "sweetalert2": "^11.12.4",
-=======
-    "sweetalert2": "^11.13.1",
->>>>>>> f00a11ad1a1bc45f60608fa73da661af31b7cb89
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -44,3 +44,21 @@
     width: 100px;
   }
   
+  .custom-swal-button {
+    background-color: #4caf50; /* Custom background color */
+    color: white; /* Text color */
+    font-size: 20px; /* Font size */
+    padding: 15px 30px; /* Padding for larger button */
+    border-radius: 8px; /* Rounded corners */
+    border: none; /* Remove default border */
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Pointer on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .custom-swal-button:hover {
+    background-color: #45a049; /* Darken background on hover */
+  }
+  
+  
