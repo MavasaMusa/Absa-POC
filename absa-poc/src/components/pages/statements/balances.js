@@ -7,18 +7,23 @@ import axios from "axios";
 const Balances = () => {
   const [balance, setBalance] = useState(""); // For displaying balance
   const [username, setUsername] = useState("");
-  const [email, setEmail] = useState(""); 
- 
-  const BASE_URL = 'https://y37s2ngjle.execute-api.us-east-1.amazonaws.com/balance';
+  const [email, setEmail] = useState("");
+
+  const BASE_URL =
+    "https://y37s2ngjle.execute-api.us-east-1.amazonaws.com/balance";
 
   // Function to fetch balance from the API
   const fetchBalance = async () => {
     try {
-      const response = await axios.post(`${BASE_URL}/Balance`, {}, {
-        headers: {
-          'Content-Type': 'application/json'
+      const response = await axios.post(
+        `${BASE_URL}/Balance`,
+        {},
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
-      });
+      );
 
       // Assuming the API returns balance data
       setBalance(response.data.balance); // Update with the actual field name from the API response
@@ -51,10 +56,9 @@ const Balances = () => {
     if (storedBalance) {
       setEmail(storedBalance); // Update state with the username
     }
-
   }, []);
 
-  
+  const isActive = (path) => window.location.pathname === path;
 
   return (
     <>
@@ -62,7 +66,7 @@ const Balances = () => {
       <div className="sidebar">
         <h3>Menu</h3>
         <ul>
-          <li>
+          <li className={isActive("/balances") ? "active" : ""}>
             <a href="/balances">Balance</a>
           </li>
           <div className="divider"></div>
@@ -83,10 +87,12 @@ const Balances = () => {
       </div>
 
       <div className="content">
-        <div style={{ padding: "20px" }}>
+        <div className="box-container">
           <h2>Welcome, {username}</h2>
           <h1>Savings Account Balance</h1>
-          <p>Your current savings account balance is: <strong>{email}</strong></p>
+          <p>
+            Your current savings account balance is: <strong>{email}</strong>
+          </p>
         </div>
       </div>
     </>

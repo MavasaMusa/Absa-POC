@@ -70,6 +70,8 @@ function BankStatement() {
     setEndDate(end);
   };
 
+  const isActive = (path) => window.location.pathname === path;
+
   return (
     <>
       <Navbar />
@@ -80,8 +82,8 @@ function BankStatement() {
             <a href="/balances">Balance</a>
           </li>
           <div className="divider"></div>
-          <li>
-            <a href="/statements">Statements</a>
+          <li className={isActive('/statements') ? 'active' : ''}>
+           <a href="/statements">Statements</a>
           </li>
           <div className="divider"></div>
           <li>
@@ -97,7 +99,7 @@ function BankStatement() {
       </div>
 
       <div className="content">
-        <div style={{ padding: "20px" }}>
+        <div className="box-container">
           <h2>Get Your Statements</h2>
 
           <h3>Select Statement Period</h3>

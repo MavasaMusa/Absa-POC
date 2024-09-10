@@ -1,11 +1,12 @@
 import Navbar from "../../navbar/navbar";
 import "./landing.css";
+import IniNavbar from "../../navbar/initialnavbar";
 import logo1 from "./tap.png";
 import Home from "./home";
 function LandingPage() {
   return (
     <>
-      <Navbar />
+      <IniNavbar />
       <div className="">
         <div className="container">
           <div className="container-left">

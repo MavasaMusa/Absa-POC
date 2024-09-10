@@ -108,10 +108,36 @@ button:hover {
 
 
 .sidebar ul li.active {
-    background-color: darkred; /* Active link background color */
+    background-color: darkred; 
+    border-radius: 25px;/* Active link background color */
 }
 
 .sidebar ul li.active a {
-    color: yellow; /* Active link text color */
+    color: whitesmoke; /* Active link text color */
 }
 
+/* Add this to your existing CSS file */
+.content {
+  padding: 20px;
+  margin-left: 260px; /* Adjust this based on your sidebar width */
+}
+
+.box-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%; /* Adjust width as needed */
+  margin: 20px auto; /* Centers the box */
+  box-sizing: border-box; /* Ensures padding is included in width/height */
+}
+
+h2, h1, p {
+  margin: 0;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 18px;
+}
